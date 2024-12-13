@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "esnext", // Or "node16"
+    "target": "es2020",
+    "lib": ["es2020", "dom"],
+    "strict": true, // Enabling strict mode for better type-checking
+    "jsx": "react-jsx", // React 17 JSX Transform
+    "moduleResolution": "node", // Ensures module resolution works like Node.js
+    "resolveJsonModule": true, // Allows importing JSON files
+    "esModuleInterop": true, // Compatibility with CommonJS
+    "skipLibCheck": true, // Skips type checking of declaration files for faster compilation
+    "forceConsistentCasingInFileNames": true, // Ensures consistent casing in imports
+    // "types": ["vite/client"],
+    "types": ["jest", "node"]
+  },
+  "include": ["src", "setupTests.js", "jest.config.js"]
+}
