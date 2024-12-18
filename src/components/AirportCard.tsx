@@ -256,8 +256,8 @@ const AirportInfoCard: React.FC<IAirportInfoCardProps> = ({
                   sx={{ verticalAlign: "middle", mr: 0.5 }}
                 />
                 <b>Wind:</b>{" "}
-                {weatherInfo.report.conditions.wind.speedKts.toFixed(2)} MPH (
-                {weatherInfo.report.conditions.wind.direction}°)
+                {weatherInfo.report.conditions.wind?.speedKts.toFixed(2)} MPH (
+                {weatherInfo.report.conditions.wind?.direction}°)
               </Typography>
             </Grid>
           </Grid>
@@ -283,7 +283,7 @@ const AirportInfoCard: React.FC<IAirportInfoCardProps> = ({
               />
               <b>Period {i + 1}:</b> {formatDate(f.period.dateStart)} <b>to</b>{" "}
               {formatDate(f.period.dateEnd)}, <b>Wind:</b>{" "}
-              {f.wind.speedKts.toFixed(2)} MPH ({f.wind.direction}°)
+              {f.wind?.speedKts.toFixed(2)} MPH ({f.wind?.direction}°)
             </Typography>
           ))}
         </Box>
